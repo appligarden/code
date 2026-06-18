@@ -135,7 +135,7 @@ function analyzeCSS(text) {
   lines.forEach((line, index) => {
     const trimmed = line.trim();
 
-    if (!trimmed || trimmed.startsWith("/*") || trimmed.startsWith("* /")) {
+    if (!trimmed || trimmed.startsWith("/*")) {
       return;
     }
 
