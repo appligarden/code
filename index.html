@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Code Map</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">CODE MAP</p>
+      <h1>コードの地図を作るツール</h1>
+      <p>
+        JS / CSS / HTML を貼るだけで、関数・セレクタ・タグ構造を順番に一覧化します。
+      </p>
+    </header>
+
+    <section class="panel">
+      <div class="toolbar">
+        <label>
+          解析タイプ
+          <select id="codeType">
+            <option value="auto">自動判定</option>
+            <option value="js">JavaScript</option>
+            <option value="css">CSS</option>
+            <option value="html">HTML</option>
+          </select>
+        </label>
+
+        <button id="analyzeBtn">解析する</button>
+        <button id="clearBtn" class="sub">クリア</button>
+      </div>
+
+      <textarea
+        id="codeInput"
+        placeholder="ここにコードを貼ってください"
+      ></textarea>
+    </section>
+
+    <section class="result-wrap">
+      <div class="result-header">
+        <h2>解析結果</h2>
+        <button id="copyBtn" class="sub">結果をコピー</button>
+      </div>
+
+      <div id="summary" class="summary">
+        まだ解析されていません。
+      </div>
+
+      <ol id="resultList" class="result-list"></ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
